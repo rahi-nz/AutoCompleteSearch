@@ -4,6 +4,13 @@
     ],
     "plugins": [
         "transform-flow-strip-types",
+        "@babel/plugin-proposal-optional-chaining",
+        [
+            "import",
+            {
+                "libraryName": "antd"
+            }
+        ],
         ["styled-components", { "ssr": true }]
     ]
 }
