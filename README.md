@@ -1,6 +1,6 @@
 # searchForm react.js
 
-This form allows the users to enter search terms and see 10 most relevant results.
+This form allows the users to enter search terms and see relevant results.
 [API](https://api-search.win.gg/search?q=start&index=tournament)
 
 # Usage
@@ -17,9 +17,17 @@ yarn dev
 open http://localhost:3030
 ```
 
-# Run flow
-
+# build
 ```bash
-yarn flow
+yarn build
 ```
 
+# Technology
+
+- JavaScript framework: Next.js 
+- Type checking: Flow 
+- HTTP client: Apisauce/built with Axios 
+- State management : Redux 
+- Middleware : Redux Thunk
+- Styling: CSS in JS/Styled Components 
+- JavaScript linter: ESLint

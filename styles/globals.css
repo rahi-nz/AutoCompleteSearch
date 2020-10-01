@@ -1,8 +1,8 @@
 html,
 body {
   padding: 0;
-  margin: 0;
-  background-color: #E7DFDC;
+  margin: 20px 0;
+  background-color: #84a9ac!important;
 }
 
 a {
@@ -17,4 +17,12 @@ a {
 html {
   font-family: sans-serif;
   font-size: 12px;
+}
+
+.ant-select {
+  width: 300px;
+}
+
+.ant-select-selector {
+  background: #e4e3e3!important;
 }
