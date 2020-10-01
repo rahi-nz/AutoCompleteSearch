@@ -3,6 +3,7 @@ import React from 'react';
 import withRedux from 'next-redux-wrapper';
 import '../styles/globals.css';
 import configureStore from '../store/store';
+import 'antd/dist/antd.css';
 
 type Props = {
   Component: Function,
