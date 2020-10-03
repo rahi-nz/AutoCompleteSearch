@@ -28,10 +28,12 @@ export default function TournamentsPanel() {
 
   useEffect(() => {
     const LocalStorageData = JSON.parse(localStorage.getItem("data"));
-    dispatch(
-      addDataFromLocalStorageAction(LocalStorageData),
-    );
-    setData(LocalStorageData);
+    if(LocalStorageData){
+      dispatch(
+        addDataFromLocalStorageAction(LocalStorageData),
+      );
+      setData(LocalStorageData);
+    }
   },0);
 
   useEffect(() => {
@@ -43,7 +45,7 @@ export default function TournamentsPanel() {
     <Container>
       {
         data?.map(el => {
-          const imageSrc = Object.keys(el.images)[0];
+          const imageSrc = el.images ? `https://cdn-images.win.gg/${el?.images[Object.keys(el.images)[0]]?.filePath}` : 'https://via.placeholder.com/50';
           return <ItemContainer>
             <Popconfirm
               title="Are you sure delete this item?"
@@ -55,7 +57,7 @@ export default function TournamentsPanel() {
                 <CloseCircleOutlined />
               </Close>
             </Popconfirm>
-            <Image src={`https://cdn-images.win.gg/${el?.images[imageSrc]?.filePath}`}/>
+            <Image src={imageSrc}/>
             <Descriptions>
               <p>{el.title}</p>
               <p>{el.description}</p>
